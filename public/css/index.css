@@ -1,0 +1,40 @@
+body {
+    background: rgb(231,231,237);
+    background: linear-gradient(90deg, rgba(231,231,237,1) 0%, rgba(255,255,255,1) 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+
+.title {
+    font-family: 'Ms Madi', cursive;
+}
+
+.max {
+    max-height: 300px;
+    width: 100%!important;
+}
+
+.line {
+    color: darkgoldenrod;
+    border-bottom: 6px solid;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 22px;
+}
+
+.box {
+    border: 9px solid darkgoldenrod;
+    width: 170px;
+    height: 60px;
+}
+
+.space {
+    margin-top: 90px;
+}
+
+.section-space {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
