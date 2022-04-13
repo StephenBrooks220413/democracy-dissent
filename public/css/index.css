@@ -1,6 +1,5 @@
 body {
-    background: rgb(231,231,237);
-    background: linear-gradient(90deg, rgba(231,231,237,1) 0%, rgba(255,255,255,1) 100%);
+    background-color: #F4F4F4;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -8,6 +7,24 @@ body {
 
 .title {
     font-family: 'Ms Madi', cursive;
+}
+
+.intro-bg {
+    background-image: linear-gradient(to bottom, #22313F, #F4F4F4);
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.bg {
+    background: url("https://cdn.pixabay.com/photo/2013/07/13/11/26/film-158157__340.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: #cea135;
 }
 
 .max {
