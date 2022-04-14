@@ -46,4 +46,9 @@ app.listen(process.env.PORT || 3000, () => {
 /////////////////////////////////////////////////////////////
 // Pages
 const homeController = require('./controllers/home')
+const mediaController = require('./controllers/media')
+const lindbergh911Controller = require('./controllers/lindbergh911')
+
 app.get('/', homeController)
+app.get('/media', mediaController)
+app.get('/lindbergh911', lindbergh911Controller)
