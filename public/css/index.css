@@ -45,6 +45,7 @@ body {
     padding-top: 70px;
 }
 
+/* ****************
 @media(max-width: 730px){
     .bg {
         background: url("https://cdn.pixabay.com/photo/2013/07/13/11/26/film-158157__340.png") no-repeat center center;
@@ -74,6 +75,7 @@ body {
     max-height: 300px;
     width: 100%!important;
 }
+************* */
 
 .line {
     color: darkgoldenrod;
