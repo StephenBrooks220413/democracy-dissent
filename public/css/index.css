@@ -45,30 +45,30 @@ body {
     padding-top: 70px;
 }
 
-/*@media(max-width: 730px){*/
-/*    .bg {*/
-/*        background: url("https://cdn.pixabay.com/photo/2013/07/13/11/26/film-158157__340.png") no-repeat center center;*/
-/*        -webkit-background-size: cover;*/
-/*        -moz-background-size: cover;*/
-/*        -o-background-size: cover;*/
-/*        background-size: cover;*/
-/*        width: 100%;*/
-/*        padding-top: 60px;*/
-/*        padding-bottom: 30px;*/
-/*        color: #cea135;*/
-/*    }*/
-/*    .media-intro {*/
-/*        background: url("../img/media-intro-img.png") no-repeat center center;*/
-/*        -webkit-background-size: cover;*/
-/*        -moz-background-size: cover;*/
-/*        -o-background-size: cover;*/
-/*        background-size: cover;*/
-/*        width: 100%;*/
-/*        padding-top: 60px;*/
-/*        padding-bottom: 60px;*/
-/*        color: white;*/
-/*    }*/
-/*}*/
+@media(max-width: 730px){
+    .bg {
+        background: url("https://cdn.pixabay.com/photo/2013/07/13/11/26/film-158157__340.png") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        color: #cea135;
+    }
+    .media-intro {
+        background: url("../img/media-intro-img.png") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        color: white;
+    }
+}
 
 .max {
     max-height: 300px;
