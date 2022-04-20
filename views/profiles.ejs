@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<!--Navbar-->
+<%- include('layouts/navbar') -%>
+<!-- Navbar -->
+
+<div class="container mt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Profiles</li>
+        </ol>
+    </nav>
+
+</div>
+
+<div class="container-fluid text-center mb-5">
+    <!--Grid row-->
+    <div class="row py-3">
+        <!--Grid column-->
+        <%for(let i =0; i < users.length; i++){%>
+            <div class="col-sm-12 col-md-3 col-lg-3 zoom">
+                <div class="card p-2">
+                    <h5 class="display-6"><%= users[i].username %></h5>
+                    <a href="/profile/<%= users[i]._id %>">
+                        <img src="https://media.istockphoto.com/photos/blue-circuitry-digital-lock-on-binary-code-picture-id913017342?k=20&m=913017342&s=612x612&w=0&h=72eO232O65-x8wEBtnNEYNWS-M8xlNfNBfSHUVoKAPw="
+                             class="img-fluid shadow-3-strong rounded"
+                             alt="img">
+                    </a>
+                    <p>
+                        Posted On <%= users[i].joinedDate.toLocaleString() %>
+                    </p>
+                </div>
+            </div>
+        <%}%>
+        <!--Grid column-->
+    </div>
+    <!--Grid row-->
+</div>
+
+<!--Main Layout-->
+
+<!-- Footer -->
+<%- include('layouts/footer') -%>
+<!-- Footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

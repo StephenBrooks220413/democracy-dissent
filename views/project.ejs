@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<!--Navbar-->
+<%- include('layouts/navbar') -%>
+<!-- Navbar -->
+
+<!-- Full Page Intro -->
+<div class="view" style="background-image: url('<%= project.image %>'); height: 280px; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+</div>
+<!-- Full Page Intro -->
+
+
+<div class="container mt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <%= project.title %>
+            </li>
+        </ol>
+    </nav>
+
+    <p class="lead">
+        Created On <%= project.datePosted.toLocaleString() %> By <%= project.email %>
+    </p>
+</div>
+
+<div class="container text-center mb-5">
+
+    <!--Grid row-->
+    <div class="row-cols-8 py-3 justify-content-center align-items-center text-center me-2 mx-auto d-flex">
+        <!--Grid column-->
+        <p class="lead">
+            <%= project.message %>
+        </p>
+        <!--Grid column-->
+    </div>
+    <p>
+        <a href="mailto:<%= project.email %>">Message</a> Author about this article.
+    </p>
+    <!--Grid row-->
+</div>
+
+<!-- Footer -->
+<%- include('layouts/footer') -%>
+<!-- Footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

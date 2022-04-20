@@ -1,0 +1,35 @@
+<div class="row text-center">
+    <% for(i=0; i<projects.length; i++) { %>
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation="fade-in"
+             class="col-md p-3">
+            <h1>Upcoming Projects</h1>
+            <hr>
+            <p>
+                Here we upload projects underway towards new productions
+                and a short description of them. To read more on the new
+                project shown, just click on the image or title. These
+                projects represent our team effort and dedication to bring
+                you our films. We hope you enjoy and value your feedback.
+            </p>
+            <strong>Posted On <%= projects[i].datePosted.toLocaleString() %></strong>
+            <br>
+            <a class="btn btn-black rounded-pill" href="mailto:<%= projects[i].email %>">Email Author</a>
+        </div>
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation="fade-in"
+             data-mdb-animation-delay="300"
+             class="col-md p-3 hover-zoom">
+            <a href="/journal/<%= projects[i]._id %>">
+                <h3 class="fw-bolder"><%= projects[i].title %></h3>
+            </a>
+            <a href="/project/<%= projects[i]._id %>">
+                <img src="<%= projects[i].image %>"
+                     class="img-fluid project-max shadow-lg rounded"
+                     alt="img" />
+            </a>
+        </div>
+    <% } %>
+</div>

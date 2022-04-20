@@ -1,17 +1,21 @@
 <div class="row">
+    <% for(i=0; i<blogpost.length; i++) { %>
     <div data-mdb-toggle="animation"
          data-mdb-animation-start="onScroll"
          data-mdb-animation="fade-in"
          data-mdb-animation-delay="300"
          class="col-md">
-        <a href="#!">
-            <h3 class="fw-bolder">Recent Blog Post</h3>
+        <a href="/journal/<%= blogpost[i]._id %>">
+            <h3 class="fw-bolder"><%= blogpost[i].title %></h3>
         </a>
         <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque cupiditate delectus inventore itaque iusto quas.
+            Here you will find the most recent blogs. You can read them
+            by clicking on the image or the title as shown.
+            <br>
+            Posted By <%= blogpost[i].email %>
         </p>
         <p>
-            <strong>Posted On April 15, 2022</strong>
+            <strong>Posted On <%= blogpost[i].datePosted.toLocaleString() %></strong>
         </p>
     </div>
     <div data-mdb-toggle="animation"
@@ -19,8 +23,11 @@
          data-mdb-animation="fade-in"
          data-mdb-animation-delay="500"
          class="col-md">
-        <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-             class="img-fluid shadow-lg rounded"
-             alt="img" />
+        <a href="/journal/<%= blogpost[i]._id %>">
+            <img src="<%= blogpost[i].image %>"
+                 class="img-fluid shadow-lg rounded"
+                 alt="img" />
+        </a>
     </div>
+    <% } %>
 </div>

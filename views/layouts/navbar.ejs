@@ -32,25 +32,71 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/lindbergh911">Lindbergh's 9/11</a>
                 </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-mdb-toggle="dropdown"
-                            aria-expanded="false"
-                    >
-                        Services
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
+                <!-- Icon dropdown -->
+                <% if(!loggedIn) { %>
+                    <li class="nav-item me-3 me-lg-0 dropdown">
+                        <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                        >
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/auth/register">Register</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/auth/login">Login</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/journals">Read Blogs</a>
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <a class="dropdown-item" href="/projects">New Projects</a>
+                            </li>
+                        </ul>
+                    </li>
+                <% } %>
+                <% if(loggedIn) { %>
+                    <!-- Avatar -->
+                    <li class="nav-item dropdown">
+                        <a
+                                class="nav-link dropdown-toggle d-flex align-items-center"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                        >
+                            <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+                                    class="rounded-circle"
+                                    height="22"
+                                    alt="Portrait of a Woman"
+                                    loading="lazy"
+                            />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="/profiles">Profiles</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/posts/new">New Blog</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/createProject">New Project</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/auth/logout">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                <% } %>
             </ul>
 
             <!-- Icons -->
@@ -70,16 +116,8 @@
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link" href="https://www.facebook.com/StopTheWheelProductions/" target="_blank"><i class="fab fa-facebook"></i></a>
                 </li>
+
             </ul>
-            <!-- Search -->
-            <form class="w-auto">
-                <input
-                        type="search"
-                        class="form-control"
-                        placeholder="Search An Article"
-                        aria-label="Search"
-                />
-            </form>
         </div>
     </div>
     <!-- Container wrapper -->

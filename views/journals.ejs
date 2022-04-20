@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+    <!--Navbar-->
+    <%- include('layouts/navbar') -%>
+    <!-- Navbar -->
+
+    <!-- Full Page Intro -->
+    <div class="blog-intro">
+        <div style="opacity: 0.9;">
+            <div class="container mt-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Journals</li>
+                    </ol>
+                </nav>
+                <%if(loggedIn){ %>
+                    <p class="lead">
+                        Share some news with the community or read existing ones.
+                        <a href="/posts/new">Create One</a>.
+                    </p>
+                <% } %>
+            </div>
+
+            <div class="container text-center mb-5">
+                <!--Grid row-->
+                <div class="row p-3">
+                    <!--Grid column-->
+                    <%for(let i =0; i < blogposts.length; i++){%>
+                        <div class="col-md hover-zoom">
+                            <div class="m-2 p-2">
+                                <h5 class="display-6"><%= blogposts[i].title %></h5>
+                                <a href="/journal/<%= blogposts[i]._id %>">
+                                    <img src="<%= blogposts[i].image %>"
+                                         class="max img-fluid shadow-3-strong rounded"
+                                         alt="img">
+                                </a>
+                                <p>
+                                    Posted On <%= blogposts[i].datePosted.toLocaleString() %>
+                                </p>
+                            </div>
+                        </div>
+                    <%}%>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+        </div>
+    </div>
+    <!-- Full Page Intro -->
+
+<!--Main Layout-->
+
+<!-- Footer -->
+<%- include('layouts/footer') -%>
+<!-- Footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

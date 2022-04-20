@@ -70,9 +70,28 @@ body {
     }
 }
 
+@media(max-width:750px){
+    .bg {
+        background: none;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        color: #cea135;
+    }
+}
+
 .max {
-    max-height: 300px;
-    width: 100%!important;
+    max-height: 250px;
+    max-width: 300px;
+}
+
+.project-max {
+    max-height: 350px;
+    max-width: 350px;
 }
 
 .line {

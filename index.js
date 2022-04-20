@@ -10,6 +10,12 @@ const flash = require('connect-flash')
 
 require('dotenv').config()
 
+/////////////////////////////////////////////////////////////
+// Middlewares
+const validateMiddleware = require('./middleware/validateMiddleware')
+const authMiddleware = require('./middleware/authMiddleware');
+const redirectIfAuthenticated = require('./middleware/redirectIfAuthenticated')
+
 const app = new express()
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
@@ -48,6 +54,42 @@ app.listen(process.env.PORT || 3000, () => {
 const homeController = require('./controllers/home')
 const mediaController = require('./controllers/media')
 const lindbergh911Controller = require('./controllers/lindbergh911')
+//////////////////////////////////////////////////////////////////////////
+// Projects
+const projectsController = require('./controllers/projects')
+app.get('/projects', projectsController)
+const projectController = require('./controllers/project')
+app.get('/project/:id', projectController)
+const newProjectController = require('./controllers/newProject')
+app.get('/createProject', newProjectController)
+const storeProjectController = require('./controllers/storeProject')
+app.post('/project/store', authMiddleware, validateMiddleware, storeProjectController)
+//////////////////////////////////////////////////////////////////////////
+// Blogpost
+const postsController = require('./controllers/posts')
+app.get('/journals', postsController)
+const postController = require('./controllers/post')
+app.get('/journal/:id', postController)
+const newPostController = require('./controllers/newPost')
+app.get('/posts/new', newPostController)
+const storePostController = require('./controllers/storePost')
+app.post('/posts/store', authMiddleware, validateMiddleware, storePostController)
+//////////////////////////////////////////////////////////////////////////
+// Users
+const loginController = require('./controllers/login')
+app.get('/auth/login', redirectIfAuthenticated, loginController)
+const registerController = require('./controllers/register')
+app.get('/auth/register', redirectIfAuthenticated, registerController)
+const storeUserController = require('./controllers/storeUser')
+app.post('/users/register', redirectIfAuthenticated, storeUserController)
+const loginUserController = require('./controllers/loginUser')
+app.post('/users/login', redirectIfAuthenticated, loginUserController)
+const logoutController = require('./controllers/logout')
+app.get('/auth/logout', logoutController)
+const profilesController = require('./controllers/profiles')
+app.get('/profiles', profilesController)
+const profileController = require('./controllers/profile')
+app.get('/profile/:id', profileController)
 
 app.get('/', homeController)
 app.get('/media', mediaController)

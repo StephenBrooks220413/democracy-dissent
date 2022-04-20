@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<!--Navbar-->
+<%- include('layouts/navbar') -%>
+<!-- Navbar -->
+
+<div class="container mt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Projects</li>
+        </ol>
+    </nav>
+    <%if(loggedIn){ %>
+        <p class="lead">
+            Share some news with the community or read existing ones.
+            <a href="createProject">Create One</a>.
+        </p>
+    <% } %>
+</div>
+
+<div class="container text-center mb-5">
+    <!--Grid row-->
+    <div class="row py-3">
+        <!--Grid column-->
+        <%for(let i =0; i < projects.length; i++){%>
+            <div class="col-md hover-zoom">
+                <div class="p-2 m-2">
+                    <h1 class="h4"><%= projects[i].title %></h1>
+                    <a href="/project/<%= projects[i]._id %>">
+                        <img src="<%= projects[i].image %>"
+                             class="img-fluid shadow-3-strong rounded max"
+                             alt="img">
+                    </a>
+                    <p>
+                        Posted On <%= projects[i].datePosted.toLocaleString() %>
+                    </p>
+                </div>
+            </div>
+        <%}%>
+        <!--Grid column-->
+    </div>
+    <!--Grid row-->
+</div>
+
+<!--Main Layout-->
+
+<!-- Footer -->
+<%- include('layouts/footer') -%>
+<!-- Footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>
