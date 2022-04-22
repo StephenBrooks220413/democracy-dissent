@@ -5,98 +5,145 @@
 <%- include('layouts/navbar') -%>
   <body>
 
-  <main class="bg">
+  <main class="intro-bg">
     <div class="container">
-      <h1 data-mdb-toggle="animation"
-          data-mdb-animation="fade-in-down"
-          data-mdb-animation-start="onLoad"
-          class="display-2 text-center">
-        Democracy & Dissent
-      </h1>
-      <h1 class="text-center">Filming Studios & Productions</h1>
-      <hr class="line" />
-      <div class="row mt-5 mb-5">
-        <div class="col-md p-2">
+      <div class="row">
+        <div class="col-md-12 text-white pt-4">
+          <h1 data-mdb-toggle="animation"
+              data-mdb-animation-start="onLoad"
+              data-mdb-animation="fade-in-down"
+              data-mdb-animation-delay="200"
+              class="display-2">
+            Stop The Wheel
+          </h1>
           <h1 data-mdb-toggle="animation"
               data-mdb-animation-start="onLoad"
               data-mdb-animation="fade-in-left"
-              data-mdb-animation-delay="300"
-              class="display-4 title">
-            Page Title
+              class="display-2"
+              data-mdb-animation-delay="400">
+            Productions
           </h1>
-          <p data-mdb-toggle="animation"
-             data-mdb-animation-start="onLoad"
-             data-mdb-animation="fade-in-left"
-             data-mdb-animation-delay="500"
-             class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet asperiores debitis dolorem ducimus eius enim illum libero necessitatibus.
-          </p>
-          <a href="mailto:#!" class="btn btn-black rounded-pill w-50">Message us</a>
-
-        </div>
-        <div data-mdb-toggle="animation"
-             data-mdb-animation-start="onLoad"
-             data-mdb-animation="fade-in-right"
-             data-mdb-animation-delay="700"
-             class="col-md p-2">
-          <iframe width="100%" height="338" src="https://www.youtube.com/embed/bdaVzNkcySA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h4 data-mdb-toggle="animation"
+              data-mdb-animation-start="onLoad"
+              data-mdb-animation="fade-in-up"
+              data-mdb-animation-delay="600"
+              style="letter-spacing: 9px;">
+            "The truth is not what you think."
+          </h4>
         </div>
       </div>
     </div>
   </main>
 
-  <div class="container section-space">
-    <%- include('components/videos') -%>
-  </div>
-
-  <div class="section-space container">
-    <%- include('components/projects') -%>
-  </div>
-
-  <article>
-    <div class="container section-space">
-      <p class="lead">Want To See More Videos? <a href="https://www.youtube.com/channel/UCVnM7MvYo98WIDwUjPay-Zg" target="_blank">Subsrcibe</a> to our YoutTube Channel</p>
-      <%- include('components/imageCarousel') -%>
+  <div class="container" style="margin-top: 70px;">
+    <div class="row">
+      <div class="col-md-6 p-2 text-white">
+        <h1 data-mdb-toggle="animation"
+            data-mdb-animation-start="onScroll"
+            data-mdb-animation-on-scroll="repeat"
+            data-mdb-animation="fade-in-left">
+          Title
+        </h1>
+        <p data-mdb-toggle="animation"
+           data-mdb-animation-start="onScroll"
+           data-mdb-animation-on-scroll="repeat"
+           data-mdb-animation="fade-in-left"
+           data-mdb-animation-delay="200"
+           class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet autem blanditiis corporis exercitationem facilis, harum inventore iste iusto libero.
+        </p>
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation-on-scroll="repeat"
+             data-mdb-animation="fade-in-left"
+             data-mdb-animation-delay="400">
+          <a href="#!" class="btn btn-white rounded-pill">more articles</a>
+        </div>
+      </div>
+      <div class="col-md-6 p-2">
+        <iframe width="100%" height="338" src="https://www.youtube.com/embed/bdaVzNkcySA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
-  </article>
+  </div>
 
-  <article class="block">
-    <div class="container">
-      <h1 class="display-3 fw-bolder text-center">The Production Team</h1>
-      <div class="row text-center">
-        <div class="col-md p-2">
-          <img src="/img/Frank_picture2.png" class="rounded-circle h-25 img-fluid" alt="frank">
-          <br>
-          <h2>Frank Jr Battaglia</h2>
-          <h4>Producer, Story and Script Consultant, Post Production Supervisor, Field Producer</h4>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque eius illum laborum minima minus.
-          </p>
-          <a href="mailto:#!" class="btn btn-white rounded-pill btn-lg">email me</a>
+  <div class="container-fluid text-white" style="margin-top: 70px;">
+    <h1 class="display-5 p-3">Recent Production Images....</h1>
+    <div class="multi-carousel">
+      <div class="multi-carousel-inner">
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation-on-scroll="repeat"
+             data-mdb-animation="fade-in-up"
+             class="multi-carousel-item">
+          <img src="https://media.istockphoto.com/photos/cameraman-recording-with-his-equipment-picture-id1308594176?b=1&k=20&m=1308594176&s=170667a&w=0&h=vMOm-Bdqs_lGDPc6kwDnovCtIwoRKKYZ01qqRudMHZk=" alt="Table Full of Spices" class="w-100"/>
         </div>
-        <div class="col-md p-2">
-          <img src="/img/Spirer_pic.png" class="rounded-circle h-25 img-fluid" alt="frank">
-          <br>
-          <h2>Frank Jr Battaglia</h2>
-          <h4>Producer, Story and Script Consultant, Post Production Supervisor, Field Producer</h4>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque eius illum laborum minima minus.
-          </p>
-          <a href="mailto:#!" class="btn btn-white rounded-pill btn-lg">email me</a>
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation-on-scroll="repeat"
+             data-mdb-animation="fade-in-up"
+             data-mdb-animation-delay="200"
+             class="multi-carousel-item">
+          <img src="https://media.istockphoto.com/photos/cameraman-recording-with-his-equipment-picture-id1308594176?b=1&k=20&m=1308594176&s=170667a&w=0&h=vMOm-Bdqs_lGDPc6kwDnovCtIwoRKKYZ01qqRudMHZk=" alt="Winter Landscape" class="w-100"/>
         </div>
-        <div class="col-md p-2">
-          <img src="/img/Ener_suit.png" class="rounded-circle h-25 img-fluid" alt="frank">
-          <br>
-          <h2>Ener Misterener</h2>
-          <h4>AKA Misterener, relocated to Toronto from Brazil  in 2017</h4>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque eius illum laborum minima minus.
-          </p>
-          <a href="mailto:#!" class="btn btn-white rounded-pill btn-lg">email me</a>
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation-on-scroll="repeat"
+             data-mdb-animation="fade-in-up"
+             data-mdb-animation-delay="300"
+             class="multi-carousel-item">
+          <img src="https://media.istockphoto.com/photos/cameraman-recording-with-his-equipment-picture-id1308594176?b=1&k=20&m=1308594176&s=170667a&w=0&h=vMOm-Bdqs_lGDPc6kwDnovCtIwoRKKYZ01qqRudMHZk=" alt="View of the City in the Mountains" class="w-100"/>
+        </div>
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation-on-scroll="repeat"
+             data-mdb-animation="fade-in-up"
+             data-mdb-animation-delay="400"
+             class="multi-carousel-item">
+          <img src="https://media.istockphoto.com/photos/cameraman-recording-with-his-equipment-picture-id1308594176?b=1&k=20&m=1308594176&s=170667a&w=0&h=vMOm-Bdqs_lGDPc6kwDnovCtIwoRKKYZ01qqRudMHZk=" alt="Place Royale Bruxelles" class="w-100"/>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" tabindex="0" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" tabindex="0" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 90px;">
+    <div class="row">
+      <div class="col-md-6 p-2">
+        <img src="https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+             class="img-fluid rounded"
+             alt="img"
+        />
+      </div>
+      <div class="col-md-6 p-2 text-white">
+        <h1 data-mdb-toggle="animation"
+            data-mdb-animation-start="onScroll"
+            data-mdb-animation-on-scroll="repeat"
+            data-mdb-animation="fade-in-right">
+          Upcoming Project
+        </h1>
+        <p data-mdb-toggle="animation"
+           data-mdb-animation-start="onScroll"
+           data-mdb-animation-on-scroll="repeat"
+           data-mdb-animation="fade-in-right"
+           data-mdb-animation-delay="200"
+           class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet autem blanditiis corporis exercitationem facilis, harum inventore iste iusto libero.
+        </p>
+        <div data-mdb-toggle="animation"
+             data-mdb-animation-start="onScroll"
+             data-mdb-animation-on-scroll="repeat"
+             data-mdb-animation="fade-in-right"
+             data-mdb-animation-delay="400">
+          <a href="#!" class="btn btn-white rounded-pill">Read More</a>
         </div>
       </div>
     </div>
-  </article>
+  </div>
 
 
   <%- include('layouts/footer') -%>

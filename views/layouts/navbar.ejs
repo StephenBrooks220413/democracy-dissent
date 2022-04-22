@@ -1,125 +1,103 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-black sticky-top navbar-dark">
-    <!-- Container wrapper -->
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-black">
     <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">LOGO</a>
-
-        <!-- Toggle button -->
+        <a class="navbar-brand text-white" href="#">
+            LOGO
+        </a>
         <button
                 class="navbar-toggler"
                 type="button"
                 data-mdb-toggle="collapse"
-                data-mdb-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
+                data-mdb-target="#navbarText"
+                aria-controls="navbarText"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
         >
             <i class="fas fa-bars"></i>
         </button>
-
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+        <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Link -->
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/media">Media</a>
+                    <a class="nav-link" href="/films">Films</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/lindbergh911">Lindbergh's 9/11</a>
+                    <a class="nav-link" href="blogs.html">Blogs</a>
                 </li>
-                <!-- Icon dropdown -->
-                <% if(!loggedIn) { %>
-                    <li class="nav-item me-3 me-lg-0 dropdown">
-                        <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
-                        >
-                            <i class="fas fa-user"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item" href="/auth/register">Register</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/auth/login">Login</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/journals">Read Blogs</a>
-                            </li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li>
-                                <a class="dropdown-item" href="/projects">New Projects</a>
-                            </li>
-                        </ul>
-                    </li>
-                <% } %>
-                <% if(loggedIn) { %>
-                    <!-- Avatar -->
-                    <li class="nav-item dropdown">
-                        <a
-                                class="nav-link dropdown-toggle d-flex align-items-center"
-                                href="#"
-                                id="navbarDropdownMenuLink"
-                                role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
-                        >
-                            <img
-                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-                                    class="rounded-circle"
-                                    height="22"
-                                    alt="Portrait of a Woman"
-                                    loading="lazy"
-                            />
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="/profiles">Profiles</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/posts/new">New Blog</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/createProject">New Project</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/auth/logout">Logout</a>
-                            </li>
-                        </ul>
-                    </li>
-                <% } %>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Coming Soon...</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        <i class="far fa-user"></i>
+                        <!--                        <i class="far fa-user-circle"></i>-->
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">Login</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Register</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Support</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--          <li class="nav-item dropdown">-->
+                <!--            <a-->
+                <!--                    class="nav-link dropdown-toggle"-->
+                <!--                    href="#"-->
+                <!--                    id="navbarDropdownMenuLink"-->
+                <!--                    role="button"-->
+                <!--                    data-mdb-toggle="dropdown"-->
+                <!--                    aria-expanded="false"-->
+                <!--            >-->
+                <!--            <i class="far fa-user-circle"></i>-->
+                <!--            </a>-->
+                <!--            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+                <!--              <li>-->
+                <!--                <a class="dropdown-item" href="#">Login</a>-->
+                <!--              </li>-->
+                <!--              <li>-->
+                <!--                <a class="dropdown-item" href="#">Register</a>-->
+                <!--              </li>-->
+                <!--              <li>-->
+                <!--                <a class="dropdown-item" href="#">Journals</a>-->
+                <!--              </li>-->
+                <!--            </ul>-->
+                <!--          </li>-->
             </ul>
-
-            <!-- Icons -->
-            <ul class="navbar-nav d-flex flex-row me-1">
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="https://www.youtube.com/channel/UCVnM7MvYo98WIDwUjPay-Zg" target="_blank"><i class="fab fa-youtube"></i></a>
-                </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="http://instagram.com/stw_dem_dis" target="_blank"><i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="https://vimeo.com/user12241547" target="_blank"><i class="fab fa-vimeo"></i></a>
-                </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="http://twitter.com/@STW_Dem_Dis" target="_blank"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="https://www.facebook.com/StopTheWheelProductions/" target="_blank"><i class="fab fa-facebook"></i></a>
-                </li>
-
-            </ul>
+            <span class="navbar-text">
+          <!-- Dropdown -->
+          <a href="">
+            <i class="fab p-2 fa-facebook-f"></i>
+          </a>
+          <a href="">
+            <i class="fab p-2 fa-linkedin-in"></i>
+          </a>
+          <a href="">
+            <i class="fab p-2 fa-instagram"></i>
+          </a>
+          <a href="">
+            <i class="fab p-2 fa-vimeo-v"></i>
+          </a>
+          <a href="">
+            <i class="fab p-2 fa-youtube"></i>
+          </a>
+        </span>
         </div>
     </div>
-    <!-- Container wrapper -->
 </nav>
-<!-- Navbar -->
