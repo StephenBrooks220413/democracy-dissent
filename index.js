@@ -35,7 +35,7 @@ app.use("*", (req, res, next)=>{
 
 /////////////////////////////////////////////////////////////
 // DB Connection
-mongoose.connect(process.env.DB_URL, {
+mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology:true
 })
 if(!mongoose){

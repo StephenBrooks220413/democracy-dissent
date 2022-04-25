@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "worker": "node index.js",
+    "postinstall": "echo 'films'"
   },
   "keywords": ["democracy films", "democracy", "films"],
   "author": "Stephen Brooks",
@@ -25,6 +27,7 @@
     "mongoose-unique-validator": "^3.0.0",
     "morgan": "^1.10.0"
   },
+  "ROOT_URL" : "http://democracyanddissent.com/",
   "engines": {
     "node": "17.7.1"
   },
