@@ -112,10 +112,12 @@
   </div>
 
   <div class="container" style="margin-top: 90px; margin-bottom: 70px;">
+    <% for(i=0; i<project.length; i++){ %>
     <div class="row">
       <div class="col-md-6 p-2">
-        <img src="https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        <img src="<%= project[i].image %>"
              class="img-fluid rounded"
+             style="max-height: 380px; width:100%;"
              alt="img"
         />
       </div>
@@ -124,7 +126,8 @@
             data-mdb-animation-start="onScroll"
             data-mdb-animation-on-scroll="repeat"
             data-mdb-animation="fade-in-right">
-          Upcoming Project
+          <span class="display-5 text-warning">New Project</span> <br>
+          <%= project[i].title %>
         </h1>
         <p data-mdb-toggle="animation"
            data-mdb-animation-start="onScroll"
@@ -132,17 +135,18 @@
            data-mdb-animation="fade-in-right"
            data-mdb-animation-delay="200"
            class="lead">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet autem blanditiis corporis exercitationem facilis, harum inventore iste iusto libero.
+          <%= project[i].message %>
         </p>
         <div data-mdb-toggle="animation"
              data-mdb-animation-start="onScroll"
              data-mdb-animation-on-scroll="repeat"
              data-mdb-animation="fade-in-right"
              data-mdb-animation-delay="400">
-          <a href="#!" class="btn btn-white rounded-pill">Read More</a>
+          <a href="/project/<%= project[i]._id %>" class="btn btn-white rounded-pill">Read More</a>
         </div>
       </div>
     </div>
+    <% } %>
   </div>
 
 

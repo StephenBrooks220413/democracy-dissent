@@ -20,7 +20,13 @@
                 <%if(loggedIn){ %>
                     <p class="lead">
                         Share some news with the community or read existing ones.
-                        <a href="/posts/new">Create One</a>.
+                        <a class="text-white" href="/posts/new">Create One</a>.
+                    </p>
+                <% } %>
+                <%if(!loggedIn){ %>
+                    <p class="lead">
+                        Share some news with the community or read existing ones.
+                        <a class="text-white" href="/auth/register">Sign Up</a> to create a blog.
                     </p>
                 <% } %>
             </div>
