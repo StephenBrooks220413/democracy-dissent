@@ -1,5 +1,5 @@
 
-body {
+.bg {
     background: rgb(108,107,120);
     background: linear-gradient(90deg, rgba(108,107,120,1) 0%, rgba(161,161,176,1) 46%, rgba(48,104,177,1) 100%);
     font-family: 'Josefin Sans', sans-serif;
