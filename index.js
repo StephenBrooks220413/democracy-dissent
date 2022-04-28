@@ -35,8 +35,15 @@ app.use("*", (req, res, next)=>{
 
 /////////////////////////////////////////////////////////////
 // DB Connection
+process.on("uncaughtException", (err) => {
+    console.log("UNCAUGHT EXCEPTION, APP SHUTTING NOW!!");
+    console.log(err.message, err.name);
+    process.exit(1);
+});
 mongoose.connect(process.env.DATABASE_URL, {
-    useUnifiedTopology:true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    autoIndex: true,
 })
 if(!mongoose){
     console.log('No DB connection')
@@ -53,6 +60,7 @@ app.listen(process.env.PORT || 3000, () => {
 // Pages
 const homeController = require('./controllers/home')
 const mediaController = require('./controllers/media')
+const booksController = require('./controllers/books')
 const filmsController = require('./controllers/films')
 const lindbergh911Controller = require('./controllers/lindbergh911')
 //////////////////////////////////////////////////////////////////////////
@@ -91,8 +99,10 @@ const profilesController = require('./controllers/profiles')
 app.get('/profiles', profilesController)
 const profileController = require('./controllers/profile')
 app.get('/profile/:id', profileController)
-
+/////////////////////////////////////////////////////////////////////////
+// Pages
 app.get('/', homeController)
 app.get('/media', mediaController)
+app.get('/books', booksController)
 app.get('/films', filmsController)
 app.get('/lindbergh911', lindbergh911Controller)
