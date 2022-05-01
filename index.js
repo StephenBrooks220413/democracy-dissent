@@ -62,6 +62,7 @@ const homeController = require('./controllers/home')
 const mediaController = require('./controllers/media')
 const booksController = require('./controllers/books')
 const filmsController = require('./controllers/films')
+const aboutController = require('./controllers/about')
 const lindbergh911Controller = require('./controllers/lindbergh911')
 //////////////////////////////////////////////////////////////////////////
 // Projects
@@ -102,6 +103,7 @@ app.get('/profile/:id', profileController)
 /////////////////////////////////////////////////////////////////////////
 // Pages
 app.get('/', homeController)
+app.get('/about', aboutController)
 app.get('/media', mediaController)
 app.get('/books', booksController)
 app.get('/films', filmsController)

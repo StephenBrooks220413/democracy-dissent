@@ -27,3 +27,14 @@
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
+.overflow {
+    white-space: nowrap;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.overflow.a:hover {
+    overflow: visible;
+}
